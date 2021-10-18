@@ -1,4 +1,4 @@
-# Krypto
+# rsa_crypto
 
 A Python 3 library for encrypting and decrypting files and/or key/value pairs in a particular section of a configuration file (.ini file).
 
@@ -23,8 +23,8 @@ This script can be used to:
 
 
 ```
-krypto -h
-usage: krypto [-h]  ...
+rsa_crypto -h
+usage: rsa_crypto [-h]  ...
 
 optional arguments:
   -h, --help  show this help message and exit
@@ -47,7 +47,7 @@ The `create` parameter is used to create a new RSA 4096-bit public/private key p
 > This key can be used both for encryption and decryption of your data, but will require users to enter the key password with each use. Keep this file private and do not distribute to anyone.
 
 ```
-krypto create -k dev
+rsa_crypto create -k dev
 Enter key password:
 Re-enter key password:
 Creating key...
@@ -64,7 +64,7 @@ If the `-k` option is not used, all key files will have the default `.rsa_` pref
 The private key will allow anyone in its possession to decrypt files and data, *be extremely careful with who can access it because it is no longer password protected*. This file can be used for feeding decrypted values to automation tools without having to provide a password. *Make sure to delete (`clear`) this file when automated decryption is no longer needed.*
 
 ```
-krypto extract -k dev
+rsa_crypto extract -k dev
 Using key: /Users/me/dev_key.bin
 Opening encrypted key.
 Enter key password:
@@ -77,7 +77,7 @@ The encryption and decryption options will look for these 2 files first and only
  *Make sure to delete (`clear`) the unprotected private key file when passwordless decryption is no longer needed. This will only delete the private key file, the public key and the password-protected key-pair files will remain on your system.*
 
 ```
-krypto clear -k dev
+rsa_crypto clear -k dev
 Using key: /Users/me/dev_private.pem
 Private key deleted: /Users/me/dev_private.pem
 ```
@@ -119,7 +119,7 @@ Using key: /Users/me/dev_public.pem
 The file can then be decrypted using:
 
 ```
-krypto decrypt -k dev -f my_file.txt.enc
+rsa_crypto decrypt -k dev -f my_file.txt.enc
 Using key: /Users/me/dev_key.bin
 Opening encrypted key.
 Enter key password:
@@ -129,7 +129,7 @@ Enter key password:
 If the wrong private key file is used or an invalid password is entered, the file will fail to be decrypted.
 
 ```
-krypto decrypt -f my_file.txt.enc
+rsa_crypto decrypt -f my_file.txt.enc
 Using key: /Users/me/.rsa_key.bin
 Opening encrypted key.
 Enter key password:
@@ -150,7 +150,7 @@ Each section will then contain several "options" and values (key/value pairs). O
 To save a value of an option named `database_password` in the `DEV` section using the default encryption key:
 
 ```
-krypto set -s DEV -o database_password
+rsa_crypto set -s DEV -o database_password
 Using key: /Users/me/Documents/rsa_public.pem
 Enter value:
 DEV my_password
@@ -162,7 +162,7 @@ If you don't specify a value, the script will prompt you for the value so that i
 
 
 ```
-krypto set -s DEV -o database_password -v my_secret_password
+rsa_crypto set -s DEV -o database_password -v my_secret_password
 Using key: /Users/me/Documents/rsa_public.pem
 DEV my_secret_password
 set
@@ -173,7 +173,7 @@ To decrypt the value:
 
 
 ```
-krypto get -s DEV -o database_password
+rsa_crypto get -s DEV -o database_password
 Using key: /Users/me/rsa_private.pem
 get
 Reading from /Users/me/.rsa_values.conf
@@ -185,13 +185,13 @@ my_secret_password
 
 
 ```
-krypto clear
+rsa_crypto clear
 Using key: /Users/me/rsa_private.pem
 Private key deleted: /Users/me/rsa_private.pem
 ```
 
 ```
-krypto get -s DEV -o database_password
+rsa_crypto get -s DEV -o database_password
 Using key: /Users/me/rsa_key.bin
 Opening encrypted key.
 Enter key password:
@@ -205,7 +205,7 @@ my_secret_password
 Now let's set and get the PROD password:
 
 ```
-krypto set -s PROD -o database_password -v super-secret
+rsa_crypto set -s PROD -o database_password -v super-secret
 Using key: /Users/me/Documents/workspaces/khan/rsa_public.pem
 PROD super-secret
 set
@@ -213,7 +213,7 @@ Updated /Users/me/.rsa_values.conf
 ```
 
 ```
-krypto get -s PROD -o database_password
+rsa_crypto get -s PROD -o database_password
 Using key: /Users/me/rsa_key.bin
 Opening encrypted key.
 Enter key password:
@@ -253,4 +253,4 @@ See the file `example.py` for use as a Python library.
 
 MacOS, Linux and Windows self-contained command-line binary versions of this software are available at:
 
-https://github.com/Christophe-Gauge/krypto/releases/tag/PROD
+https://github.com/Christophe-Gauge/rsa_crypto/releases/tag/PROD

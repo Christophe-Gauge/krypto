@@ -9,7 +9,7 @@ __version__ = "1.0.2"
 
 '''
 Encrypt and decrypt data using RSA certificates
-https://github.com/Christophe-Gauge/rsa_crypto
+https://github.com/Christophe-Gauge/rsa-crypto
 
 Uses pycryptodome, based on examples available at:
 https://pycryptodome.readthedocs.io/en/latest/src/examples.html#generate-public-key-and-private-key
