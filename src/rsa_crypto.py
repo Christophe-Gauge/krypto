@@ -5,11 +5,11 @@ from __future__ import (absolute_import, division,
 
 __author__ = "Christophe Gauge"
 __email__ = "chris@videre.us"
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 
 '''
 Encrypt and decrypt data using RSA certificates
-https://github.com/Christophe-Gauge/rsa-crypto
+https://github.com/Christophe-Gauge/rsa_crypto
 
 Uses pycryptodome, based on examples available at:
 https://pycryptodome.readthedocs.io/en/latest/src/examples.html#generate-public-key-and-private-key

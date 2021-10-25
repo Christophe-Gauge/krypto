@@ -1,4 +1,4 @@
-import rsa_crypto.__main__ as rsa_crypto
+import rsa_crypto
 import argparse
 
 
