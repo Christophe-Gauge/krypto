@@ -5,7 +5,7 @@ from __future__ import (absolute_import, division,
 
 __author__ = "Christophe Gauge"
 __email__ = "chris@videre.us"
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 
 '''
 Encrypt and decrypt data using RSA certificates

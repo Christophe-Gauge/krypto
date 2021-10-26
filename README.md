@@ -7,7 +7,7 @@ This library uses public/private RSA keys to perform the encryption.
 
 ## Installation
 
-Download from the (PyPi repository)[https://pypi.org/project/rsa-crypto/]:
+Download from the [PyPi repository](https://pypi.org/project/rsa-crypto/):
 ```
 pip3 install rsa-crypto
 ```
