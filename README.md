@@ -1,6 +1,6 @@
 # rsa_crypto
 
-A Python 3 library for encrypting and decrypting files and/or key/value pairs in a particular section of a configuration file (.ini file).
+A Python 3 command-line tool and a library for encrypting and decrypting files and/or key/value pairs in a particular section of a configuration file (.ini file).
 
 This library uses public/private RSA keys to perform the encryption.
 
