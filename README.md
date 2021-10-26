@@ -7,8 +7,14 @@ This library uses public/private RSA keys to perform the encryption.
 
 ## Installation
 
-Download or clone this repository, cd to the directory and type:
+Download from the (PyPi repository)[https://pypi.org/project/rsa-crypto/]:
+```
+pip3 install rsa-crypto
+```
 
+OR
+
+Download or clone this repository, cd to the directory and type:
 ```
 python3 setup.py install
 ```
