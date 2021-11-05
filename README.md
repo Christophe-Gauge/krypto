@@ -259,4 +259,4 @@ See the file `example.py` for use as a Python library.
 
 MacOS, Linux and Windows self-contained command-line binary versions of this software are available at:
 
-https://github.com/Christophe-Gauge/rsa_crypto/releases/tag/PROD
+https://github.com/Christophe-Gauge/rsa_crypto/releases/tag/v1.0.4
