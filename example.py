@@ -6,12 +6,17 @@ import argparse
 args = argparse.Namespace(option='test')
 myVar = rsa_crypto.encrypt_value(args)
 
+# decrypt a value in the DEFAULT and prompt for a value to set
+args = argparse.Namespace(option='myoption')
+myVar = rsa_crypto.decrypt_value(args)
+print(myVar)
+
 # encrypt a value in mysection and set a value
 args = argparse.Namespace(section='mysection', option='myoption', value='myvalue')
 myVar = rsa_crypto.encrypt_value(args)
 
 
-# encrypt a value in mysection and prompt for a value to set
+# decrypt a value in mysection and prompt for a value to set
 args = argparse.Namespace(section='mysection', option='myoption')
 myVar = rsa_crypto.decrypt_value(args)
 print(myVar)
