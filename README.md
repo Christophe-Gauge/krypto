@@ -1,6 +1,9 @@
 # rsa_crypto
 
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
+![pypi](https://img.shields.io/pypi/v/pybadges.svg)
+![versions](https://img.shields.io/pypi/pyversions/pybadges.svg)
+
 
 A Python 3 command-line tool and a library for encrypting and decrypting files and/or key/value pairs in a particular section of a configuration file (.ini file).
 
