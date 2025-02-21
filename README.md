@@ -12,6 +12,9 @@ This library uses public/private RSA keys to perform the encryption.
 
 ## Installation
 
+![pip installation](tests/golden-images/pip.svg)
+
+
 Download from the [PyPi repository](https://pypi.org/project/rsa-crypto/):
 ```
 pip3 install rsa-crypto
